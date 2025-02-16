@@ -1,0 +1,149 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    position: relative;
+}
+
+/* Кнопка авторизации */
+.auth-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a76a8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #3c5a99;
+}
+
+/* Выпадающее меню для выбора плейлистов */
+.playlist-menu {
+    position: fixed;
+    top: 0;
+    left: -50%; /* Сначала скрыто */
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.playlist-menu.open {
+    left: 0; /* Появляется с левой стороны */
+}
+
+.playlist-menu h3 {
+    margin-bottom: 10px;
+}
+
+.playlist-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.playlist-menu li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playlist-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Основной контейнер */
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Название песни */
+#trackName {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Ползунок для перемотки трека */
+#seekSlider {
+    width: 80%;
+    margin: 10px auto;
+}
+
+/* Контролы */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Кнопка громкости */
+.volume-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#volumeBtn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#volumeBtn:hover {
+    background-color: #0056b3;
+}
+
+#volumeSlider {
+    width: 150px; /* Размер ползунка */
+}

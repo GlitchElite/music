@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный плеер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Кнопка авторизации через ВК -->
+    <button id="vkAuthBtn" class="auth-btn">Войти через ВК</button>
+
+    <!-- Выпадающее меню для выбора плейлистов -->
+    <div id="playlistMenu" class="playlist-menu" style="display: none;">
+        <h3>Выберите трек:</h3>
+        <ul id="playlistList"></ul>
+    </div>
+
+    <!-- Музыкальный плеер -->
+    <div class="container" style="display: none;" id="playerContainer">
+        <img src="assets/avatar.jpeg" alt="Аватарка" class="avatar">
+
+        <!-- Название песни -->
+        <div id="trackName">Загрузка...</div>
+
+        <!-- Ползунок для перемотки трека -->
+        <input type="range" id="seekSlider" min="0" max="100" value="0" step="1">
+
+        <!-- Контролы -->
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">⏮️</button>
+            <button id="playPauseBtn" class="control-btn">⏸</button>
+            <button id="nextBtn" class="control-btn">⏭️</button>
+        </div>
+
+        <!-- Кнопка громкости -->
+        <div class="volume-container">
+            <button id="volumeBtn">🔊</button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+
+    <!-- Подключение Axios для HTTP-запросов -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
