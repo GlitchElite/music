@@ -1,6 +1,6 @@
 // Константы для VK API
 const VK_CLIENT_ID = '53082919'; // Ваш client_id (замените на ваш)
-const VK_REDIRECT_URI = 'http://localhost:8000/callback.html'; // URL для перенаправления после авторизации
+const VK_REDIRECT_URI = 'https://glitchelite.github.io/music/callback.html'; // URL для перенаправления после авторизации
 
 // Элементы интерфейса
 const vkAuthBtn = document.getElementById('vkAuthBtn');
