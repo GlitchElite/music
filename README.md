@@ -1,4 +1,4 @@
-# misic
+# music
 ├── index.html       // Главная страница
 ├── styles.css       // Ваш CSS-файл
 ├── script.js        // Аминации
